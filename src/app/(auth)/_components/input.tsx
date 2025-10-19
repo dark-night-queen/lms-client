@@ -30,7 +30,7 @@ export const InputGroup = ({
         {label}
       </Label>
 
-      <BaseInputGroup className="px-4 py-6">
+      <BaseInputGroup className="py-6">
         <InputGroupInput id={label} {...inputProps} />
         <InputGroupAddon>
           <Icon className="text-green-700" />

@@ -7,6 +7,7 @@ import {
   Users,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { Routes, RouteNames } from "../../constants";
 
 type NavItem = {
   title: string;
@@ -16,39 +17,39 @@ type NavItem = {
 
 const NavItems: NavItem[] = [
   {
-    title: "Dashboard",
-    url: "/",
+    title: RouteNames.DASHBOARD,
+    url: Routes.DASHBOARD,
     icon: LayoutDashboard,
   },
   {
-    title: "Calendar",
-    url: "#",
+    title: RouteNames.CALENDAR,
+    url: Routes.CALENDAR,
     icon: Calendar,
   },
 ];
 
 const NavToolItems: NavItem[] = [
   {
-    title: "Analytics",
-    url: "#",
+    title: RouteNames.ANALYTICS,
+    url: Routes.ANALYTICS,
     icon: ChartColumnStacked,
   },
   {
-    title: "Team",
-    url: "#",
+    title: RouteNames.TEAM,
+    url: Routes.TEAM,
     icon: Users,
   },
 ];
 
 const NavFooterItems: NavItem[] = [
   {
-    title: "Search",
-    url: "#",
+    title: RouteNames.SEARCH,
+    url: Routes.SEARCH,
     icon: Search,
   },
   {
-    title: "Settings",
-    url: "#",
+    title: RouteNames.SETTINGS,
+    url: Routes.SETTINGS,
     icon: Settings,
   },
 ];

@@ -1,23 +1,29 @@
+"use client";
+
 // code dependencies
 import React from "react";
 
 // core components
-import {
-  SidebarProvider,
-  SidebarTrigger,
-  SidebarInset,
-} from "@/components/ui/sidebar";
+import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar";
 
 // custom components
 import { Sidebar } from "./_components/sidebar";
+import { SiteHeader } from "./_components/site-header";
 
 const MainLayout = ({ children }: React.PropsWithChildren) => {
   return (
-    <SidebarProvider>
+    <SidebarProvider
+      style={
+        {
+          "--sidebar-width": "calc(var(--spacing) * 72)",
+          "--header-height": "calc(var(--spacing) * 12)",
+        } as React.CSSProperties
+      }
+    >
       <Sidebar />
 
       <SidebarInset>
-        <SidebarTrigger />
+        <SiteHeader />
         {children}
       </SidebarInset>
     </SidebarProvider>

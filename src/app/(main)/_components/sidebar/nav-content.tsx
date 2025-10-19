@@ -22,6 +22,10 @@ interface NavContentProps
   items: NavItem[];
 }
 
+interface NavContentWithLabelProps extends NavContentProps {
+  label: string;
+}
+
 const NavMenuContent = ({ items }: { items: NavItem[] }) => {
   const pathname = usePathname();
 
@@ -50,10 +54,6 @@ export const NavContent = ({ items, ...props }: NavContentProps) => {
     </SidebarGroup>
   );
 };
-
-interface NavContentWithLabelProps extends NavContentProps {
-  label: string;
-}
 
 export const NavContentWithLabel = ({
   label,

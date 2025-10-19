@@ -33,19 +33,19 @@ export const SiteHeader = () => {
 
         <Separator
           orientation="vertical"
-          className="mx-2 data-[orientation=vertical]:h-4"
+          className="md:mx-2 data-[orientation=vertical]:h-4"
         />
 
-        <h1 className="text-base font-medium">{title}</h1>
+        <h1 className="text-sm md:text-base font-medium">{title}</h1>
 
         <div className="ml-auto flex items-center gap-2">
           <Sun className="h-4 w-4 text-yellow-500" />
-          <p className="text-sm">{currentDateTime.format("ddd DD-MM-YY")}</p>
+          <p className="text-xs md:text-sm">{currentDateTime.format("ddd DD-MM-YY")}</p>
           <Separator
             orientation="vertical"
-            className="mx-1 data-[orientation=vertical]:h-4 bg-accent-foreground/50"
+            className="md:mx-1 data-[orientation=vertical]:h-4 bg-accent-foreground/50"
           />
-          <p className="text-sm">{currentDateTime.format("hh:mm A")}</p>
+          <p className="text-xs md:text-sm">{currentDateTime.format("hh:mm A")}</p>
         </div>
       </div>
     </header>

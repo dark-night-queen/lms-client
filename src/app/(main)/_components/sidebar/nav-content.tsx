@@ -1,5 +1,7 @@
 // code dependencies
 import React from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 // core components
 import {
@@ -20,23 +22,31 @@ interface NavContentProps
   items: NavItem[];
 }
 
+const NavMenuContent = ({ items }: { items: NavItem[] }) => {
+  const pathname = usePathname();
+
+  return (
+    <SidebarGroupContent>
+      <SidebarMenu>
+        {items.map((item) => (
+          <SidebarMenuItem key={item.title}>
+            <SidebarMenuButton asChild isActive={pathname === item.url}>
+              <Link href={item.url}>
+                <item.icon />
+                <span>{item.title}</span>
+              </Link>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        ))}
+      </SidebarMenu>
+    </SidebarGroupContent>
+  );
+};
+
 export const NavContent = ({ items, ...props }: NavContentProps) => {
   return (
     <SidebarGroup {...props}>
-      <SidebarGroupContent>
-        <SidebarMenu>
-          {items.map((item) => (
-            <SidebarMenuItem key={item.title}>
-              <SidebarMenuButton asChild>
-                <a href={item.url}>
-                  <item.icon />
-                  <span>{item.title}</span>
-                </a>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-          ))}
-        </SidebarMenu>
-      </SidebarGroupContent>
+      <NavMenuContent items={items} />
     </SidebarGroup>
   );
 };
@@ -53,20 +63,7 @@ export const NavContentWithLabel = ({
   return (
     <SidebarGroup {...props}>
       <SidebarGroupLabel>{label}</SidebarGroupLabel>
-      <SidebarGroupContent>
-        <SidebarMenu>
-          {items.map((item) => (
-            <SidebarMenuItem key={item.title}>
-              <SidebarMenuButton asChild>
-                <a href={item.url}>
-                  <item.icon />
-                  <span>{item.title}</span>
-                </a>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-          ))}
-        </SidebarMenu>
-      </SidebarGroupContent>
+      <NavMenuContent items={items} />
     </SidebarGroup>
   );
 };

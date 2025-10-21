@@ -4,9 +4,9 @@ import moment, { Moment } from "moment";
 import { usePathname } from "next/navigation";
 
 // core components
-import { Sun } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { SidebarTrigger } from "@/components/ui/sidebar";
+import { ToggleTheme } from "@/components/core/toggle-theme";
 
 // constants
 import { getRouteNameFromPathname } from "../constants";
@@ -17,6 +17,8 @@ export const SiteHeader = () => {
   const title = getRouteNameFromPathname(pathname) || "Unknown";
 
   const [currentDateTime, setCurrentDateTime] = useState<Moment>(moment());
+  const currentDate = currentDateTime.format("ddd DD-MM-YY");
+  const currentTime = currentDateTime.format("hh:mm A");
 
   React.useEffect(() => {
     const interval = setInterval(() => {
@@ -39,13 +41,13 @@ export const SiteHeader = () => {
         <h1 className="text-sm md:text-base font-medium">{title}</h1>
 
         <div className="ml-auto flex items-center gap-2">
-          <Sun className="h-4 w-4 text-yellow-500" />
-          <p className="text-xs md:text-sm">{currentDateTime.format("ddd DD-MM-YY")}</p>
+          <ToggleTheme />
+          <p className="text-xs md:text-sm">{currentDate}</p>
           <Separator
             orientation="vertical"
             className="md:mx-1 data-[orientation=vertical]:h-4 bg-accent-foreground/50"
           />
-          <p className="text-xs md:text-sm">{currentDateTime.format("hh:mm A")}</p>
+          <p className="text-xs md:text-sm">{currentTime}</p>
         </div>
       </div>
     </header>

@@ -5,7 +5,7 @@ import data from "./data.json";
 
 const Team = () => {
   return (
-    <div className="p-4">
+    <div>
       <DataTable data={data} />
     </div>
   );

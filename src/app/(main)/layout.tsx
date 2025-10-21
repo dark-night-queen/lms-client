@@ -26,7 +26,8 @@ const MainLayout = ({ children }: React.PropsWithChildren) => {
         <div className="sticky top-0 z-10 bg-background rounded-xl">
           <SiteHeader />
         </div>
-        {children}
+
+        <div className="p-4 md:p-8">{children}</div>
       </SidebarInset>
     </SidebarProvider>
   );

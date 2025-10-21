@@ -15,7 +15,7 @@ export const WelcomeCard = () => {
         <p>Have a good day!</p>
       </div>
 
-      <Image src={Welcome} alt="Welcome" width={200} className="rounded-2xl" />
+      <Image src={Welcome} alt="Welcome" className="rounded-2xl md:w-[100px] lg:w-[200px]" />
     </div>
   );
 };

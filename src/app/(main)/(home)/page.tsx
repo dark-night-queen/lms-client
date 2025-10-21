@@ -14,21 +14,21 @@ import ComingSoon from "@/assets/images/coming-soon.jpg";
 // driver code
 export default function Home() {
   return (
-    <div className="grid grid-cols-1 gap-6 p-4 md:grid-cols-4 md:grid-rows-9 md:gap-8">
-      <SectionCard className="col-span-1 md:col-span-2 md:row-span-3">
+    <div className="grid grid-cols-1 gap-6 p-4 md:grid-cols-12 md:grid-rows-9 md:gap-8">
+      <SectionCard className="col-span-1 md:col-span-6 md:row-span-3">
         <WelcomeCard />
       </SectionCard>
 
-      <SectionCard className="col-span-1 md:col-start-3 md:row-span-4">
+      <SectionCard className="col-span-1 md:col-span-3 md:col-start-7 md:row-span-4">
         <LeaveStats />
       </SectionCard>
 
-      <SectionCard className="col-span-1 md:row-span-7 md:col-start-4 md:row-start-1">
+      <SectionCard className="col-span-1 md:col-span-3 md:row-span-7 md:col-start-10 md:row-start-1">
         <Attendance />
       </SectionCard>
 
       <SectionCard
-        className="col-span-1 md:row-span-5 md:col-start-3 md:row-start-5"
+        className="col-span-1 md:col-span-4 md:row-span-5 md:col-start-6 md:row-start-5"
         contentClassName="px-2"
       >
         <div className="flex flex-col items-center gap-4">
@@ -38,7 +38,7 @@ export default function Home() {
         </div>
       </SectionCard>
 
-      <SectionCard className="col-span-1 md:col-span-2 md:row-span-5 md:col-start-1 md:row-start-4 relative bg-[#f8efe2]">
+      <SectionCard className="col-span-1 md:col-span-5 md:row-span-5 md:col-start-1 md:row-start-4 relative bg-[#f8efe2]">
         <Image
           src={ComingSoon}
           alt={"Coming Soon"}

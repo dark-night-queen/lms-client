@@ -4,7 +4,7 @@ import { Calendar } from "../_components/calendar";
 const CalendarPage = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 gap-4 lg:gap-8">
-      <Calendar className="col-span-1 md:col-span-3 w-full pr-8" />
+      <Calendar className="col-span-1 md:col-span-3 w-full lg:pr-8" />
 
       <div className="col-span-1 md:col-start-4 bg-tertiary-foreground rounded-xl p-4 lg:p-8">
         Work in progress

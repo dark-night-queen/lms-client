@@ -19,11 +19,11 @@ const chartConfig = {
   },
   leavesUsed: {
     label: "Leaves Used",
-    color: "var(--chart-2)",
+    color: "var(--chart-3)",
   },
   leavesLeft: {
     label: "Leaves Left",
-    color: "var(--chart-3)",
+    color: "var(--chart-1)",
   },
 } satisfies ChartConfig;
 

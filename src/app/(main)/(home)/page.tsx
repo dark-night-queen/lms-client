@@ -2,11 +2,11 @@
 import Image from "next/image";
 
 // custom components
-import { SectionCard } from "./_components/section-card";
-import { WelcomeCard } from "./_components/home/welcome-card";
-import { LeaveStats } from "./_components/home/leave-stats";
-import { Attendance } from "./_components/home/attendance";
-import { Calendar } from "./_components/calendar";
+import { SectionCard } from "../_components/section-card";
+import { WelcomeCard } from "./_components/welcome-card";
+import { LeaveStats } from "./_components/leave-stats";
+import { Attendance } from "./_components/attendance";
+import { Calendar } from "../_components/calendar";
 
 // assets
 import ComingSoon from "@/assets/images/coming-soon.jpg";

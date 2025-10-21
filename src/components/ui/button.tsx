@@ -36,12 +36,12 @@ const buttonVariants = cva(
       {
         variant: "default",
         color: "primary",
-        className: "bg-tertiary text-accent-foreground hover:bg-tertiary/90",
+        className: "bg-tertiary dark:text-accent-foreground hover:bg-tertiary/90",
       },
       {
         variant: "ghost",
         color: "primary",
-        className: "text-tertiary-foreground",
+        className: "text-tertiary-foreground hover:text-tertiary-foreground/70",
       },
     ],
     defaultVariants: {
@@ -56,6 +56,7 @@ function Button({
   className,
   variant,
   size,
+  color,
   asChild = false,
   ...props
 }: React.ComponentProps<"button"> &
@@ -67,7 +68,7 @@ function Button({
   return (
     <Comp
       data-slot="button"
-      className={cn(buttonVariants({ variant, size, className }))}
+      className={cn(buttonVariants({ variant, size, color, className }))}
       {...props}
     />
   );

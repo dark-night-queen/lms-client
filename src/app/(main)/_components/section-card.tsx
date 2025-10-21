@@ -16,7 +16,7 @@ export const SectionCard = ({
   children,
 }: SectionCardProps) => {
   return (
-    <Card className={`bg-green-800/20 justify-center border-0 ${className}`}>
+    <Card className={`bg-tertiary-foreground/40 justify-center border-0 ${className}`}>
       <CardContent className={contentClassName}>{children}</CardContent>
     </Card>
   );

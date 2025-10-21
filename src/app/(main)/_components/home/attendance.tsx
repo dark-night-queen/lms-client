@@ -10,7 +10,7 @@ import { Separator } from "@/components/ui/separator";
 export const Attendance = () => {
   return (
     <div className="flex flex-col items-center gap-6">
-      <p className="text-green-950 text-xl font-semibold">Attendance</p>
+      <p className="text-xl font-semibold">Attendance</p>
 
       <Card className="bg-accent-foreground/20 border-0 w-full p-0">
         <CardContent className="flex p-4 justify-between">
@@ -31,7 +31,7 @@ export const Attendance = () => {
         </CardContent>
       </Card>
 
-      <Button className="bg-green-950 w-full">Punch In</Button>
+      <Button className="w-full">Punch In</Button>
     </div>
   );
 };

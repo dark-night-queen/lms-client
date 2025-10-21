@@ -10,9 +10,9 @@ export const WelcomeCard = () => {
   return (
     <div className="flex flex-col gap-8 md:flex-row justify-between items-center">
       <div className="flex flex-col">
-        <p className="text-sm text-green-950">Hi, John Doe</p>
-        <p className="text-3xl font-bold text-green-950">Good Morning</p>
-        <p className="text-green-950/50">Have a good day!</p>
+        <p className="text-sm">Hi, John Doe</p>
+        <p className="text-3xl font-bold ">Good Morning</p>
+        <p>Have a good day!</p>
       </div>
 
       <Image src={Welcome} alt="Welcome" width={200} className="rounded-2xl" />

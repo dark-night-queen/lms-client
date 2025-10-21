@@ -47,7 +47,7 @@ export const LeaveStats = () => {
 
   return (
     <div className="flex flex-col justify-between gap-2">
-      <p className="text-xl font-semibold text-green-950 self-center">
+      <p className="text-xl font-semibold self-center">
         Leave Status
       </p>
 
@@ -102,18 +102,18 @@ export const LeaveStats = () => {
       </div>
 
       <div>
-        <p className="text-xs text-green-950/50">
+        <p className="text-xs">
           Leaves Used:{" "}
-          <span className="text-lg text-green-950">{leavesUsed}</span>
+          <span className="text-lg">{leavesUsed}</span>
         </p>
 
-        <p className="text-xs text-green-950/50">
+        <p className="text-xs">
           Total Leaves Available:{" "}
-          <span className="text-lg text-green-950">{totalWorkdays}</span>
+          <span className="text-lg">{totalWorkdays}</span>
         </p>
       </div>
 
-      <Button className="bg-green-950">Apply for leave</Button>
+      <Button>Apply for leave</Button>
     </div>
   );
 };

@@ -12,7 +12,7 @@ const AuthLayout = ({ children }: React.PropsWithChildren) => {
         <Hero />
       </div>
 
-      <div className="w-full md:w-1/2 bg-white dark:bg-gray-900 flex flex-col items-center justify-center p-6 md:p-30 gap-6 absolute md:relative bottom-20 md:bottom-0">
+      <div className="w-full md:w-1/2 flex flex-col items-center justify-center p-6 md:p-30 gap-6 absolute md:relative bottom-20 md:bottom-0">
         {children}
       </div>
     </main>

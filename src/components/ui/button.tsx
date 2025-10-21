@@ -9,8 +9,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default:
-          "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90",
         destructive:
           "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
         outline:
@@ -36,7 +35,8 @@ const buttonVariants = cva(
       {
         variant: "default",
         color: "primary",
-        className: "bg-tertiary dark:text-accent-foreground hover:bg-tertiary/90",
+        className:
+          "bg-tertiary dark:text-accent-foreground hover:bg-tertiary/90",
       },
       {
         variant: "ghost",
@@ -52,6 +52,11 @@ const buttonVariants = cva(
   }
 );
 
+type ButtonProps = React.ComponentProps<"button"> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean;
+  };
+
 function Button({
   className,
   variant,
@@ -59,10 +64,7 @@ function Button({
   color,
   asChild = false,
   ...props
-}: React.ComponentProps<"button"> &
-  VariantProps<typeof buttonVariants> & {
-    asChild?: boolean;
-  }) {
+}: ButtonProps) {
   const Comp = asChild ? Slot : "button";
 
   return (
@@ -75,3 +77,4 @@ function Button({
 }
 
 export { Button, buttonVariants };
+export type { ButtonProps };

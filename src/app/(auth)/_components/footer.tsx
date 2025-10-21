@@ -17,7 +17,7 @@ export const Footer = ({ buttonText, href, children }: FooterProps) => {
     <div className="fixed bottom-6 md:bottom-10 w-full px-10">
       <p className="mt-4 text-center text-sm opacity-70">
         {children}{" "}
-        <Button variant="ghost" className="px-0 font-bold text-green-700">
+        <Button variant="ghost" className="px-0 font-bold">
           <Link href={href}>{buttonText}</Link>
         </Button>
       </p>

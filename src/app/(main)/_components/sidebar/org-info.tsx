@@ -26,7 +26,7 @@ export const OrgInfo = ({ orgName, orgPlan = "Basic" }: OrgInfoProps) => {
           size="lg"
           className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
         >
-          <div className="bg-green-700 text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
+          <div className="bg-tertiary-foreground text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
             <Sprout className="size-4" />
           </div>
 

@@ -30,7 +30,7 @@ const Onboarding = () => {
 
       <Button
         size="lg"
-        className="w-full bg-green-700"
+        className="w-full"
         onClick={handleContinue}
       >
         Continue

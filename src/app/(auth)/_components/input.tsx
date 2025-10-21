@@ -33,7 +33,7 @@ export const InputGroup = ({
       <BaseInputGroup className="py-6">
         <InputGroupInput id={label} {...inputProps} />
         <InputGroupAddon>
-          <Icon className="text-green-700" />
+          <Icon className="text-tertiary-foreground" />
         </InputGroupAddon>
       </BaseInputGroup>
     </div>

@@ -63,7 +63,7 @@ const SignUp = () => {
         placeholder="Re-enter your password"
       />
 
-      <Button size="lg" className="w-full bg-green-700" onClick={handleSignup}>
+      <Button size="lg" className="w-full" onClick={handleSignup}>
         Sign Up
       </Button>
 

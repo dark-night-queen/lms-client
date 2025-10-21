@@ -46,13 +46,13 @@ const Login = () => {
 
         <div className="w-full flex items-center justify-between">
           <InputCheckbox label="Remember Me" />
-          <Button variant="ghost" className="pr-0 font-bold text-green-700">
+          <Button variant="ghost" className="pr-0 font-bold">
             Forgot Password?
           </Button>
         </div>
       </div>
 
-      <Button size="lg" className="w-full bg-green-700" onClick={handleLogin}>
+      <Button size="lg" className="w-full" onClick={handleLogin}>
         Login
       </Button>
 

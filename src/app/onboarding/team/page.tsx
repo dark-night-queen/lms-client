@@ -34,12 +34,12 @@ const Team = () => {
         />
 
         <div className="w-full flex flex-col md:flex-row justify-between">
-          <Button variant="ghost" size="sm" className="text-green-700">
+          <Button variant="ghost" size="sm" className="text-tertiary-foreground">
             <CirclePlus />
             Add another
           </Button>
 
-          <Button variant="ghost" size="sm" className="text-green-700">
+          <Button variant="ghost" size="sm" className="text-tertiary-foreground">
             <Link />
             Get a shareable link instead
           </Button>
@@ -48,7 +48,7 @@ const Team = () => {
 
       <Button
         size="lg"
-        className="w-full bg-green-700"
+        className="w-full"
         onClick={handleContinue}
       >
         Continue
